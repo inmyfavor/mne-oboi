@@ -1,0 +1,28 @@
+@import 'src/style/fonts.scss';
+@import 'src/style/colors.scss';
+
+$font-700: MontserratBold;
+$font-600: MontserratSemiBold;
+$font-500: MontserratMedium;
+$font-400: MontserratRegular;
+$font-300: MontserratLight;
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%column {
+    display: flex;
+    flex-direction: column;
+}
+
+%row {
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    box-sizing: border-box;
+}
