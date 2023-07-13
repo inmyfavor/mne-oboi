@@ -3,7 +3,6 @@ import Tab from './Tab';
 
 const tabs = [
     'КАТАЛОГ', 
-    'ИНТЕРЬЕРНЫЕ НАКЛЕЙКИ', 
     'ДЕТСКИЕ ОБОИ', 
     'ОТЗЫВЫ', 
     'РАСПРОДАЖА', 
@@ -13,8 +12,8 @@ const tabs = [
 
 export default function Menu() {
     return (
-        <ul className='menu'>
+        <>
         {tabs.map((tab: string, index: number) => <Tab key={'tab:'+index} title={tab}/>)}
-        </ul>
+        </>
     );
 };
