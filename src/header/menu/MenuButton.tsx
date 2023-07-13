@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import { useAppDispatch } from '../app/hooks';
-import { show } from '../app/menuModalSlice';
+import { useAppDispatch } from '../../app/hooks';
+import { showModal } from '../../app/menuModalSlice';
 
 const lines: ReactNode[] = [];
 
@@ -11,14 +11,14 @@ for (let i = 0; i < 3; i++) {
 export default function MenuButton() {
     const dispatch = useAppDispatch();
 
-    function handleShow() {
-        dispatch(show());
+    function handleShowModal() {
+        dispatch(showModal());
     }
 
     return (
         <button 
             className='menu-lines'
-            onClick={handleShow}>
+            onClick={handleShowModal}>
             {lines}
         </button>
     );

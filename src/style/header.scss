@@ -1,15 +1,25 @@
 @import 'src/style/style.scss';
 
-@mixin lg {
+@mixin lg-max {
     @media screen and (max-width: 1240px) {
       @content;
     }
-  }
+}
+
+@mixin lg-min {
+    @media screen and (min-width: 1240px) {
+      @content;
+    }
+}
 
 %hide {
-    @include lg {
+    @include lg-max {
         display: none;
     }
+}
+
+%wqtr {
+    width: 100%*0.4;
 }
 
 .header {
@@ -25,8 +35,9 @@
     align-items: center;
     padding: 0 40px;
     justify-content: space-between;
+    gap: 26px;
 
-    @include lg {
+    @include lg-max {
         height: 78px;
     }
 }
@@ -41,7 +52,7 @@
     @extend %row;
 
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 %menu {
@@ -58,25 +69,36 @@
     row-gap: 4px;
     white-space: nowrap;
     justify-content: end;
+    font-family: $font-600;
 }
 
 .mobile-menu {
     @extend %column;
     @extend %menu;
 
-    gap: 8px;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #E7EAEF;
+    font-family: $font-500;
 }
 
 .tab {
     color: #4D4D4D;
-    font-family: $font-600;
     font-size: 12px;
     white-space: nowrap;
+    width: fit-content;
+    cursor: pointer;
 
-    &:hover {
-        cursor: pointer;
-        color: $pink;
+    @include lg-min {
+        &:hover {
+            color: $pink;
+        }
     }
+
+    // &:hover {
+    //     cursor: pointer;
+    //     color: $pink;
+    // }
 }
 
 .phone {
@@ -137,7 +159,7 @@
         opacity: 1;
     }
 
-    @include lg {
+    @include lg-max {
         display: flex;
     }
 }
@@ -153,18 +175,106 @@
     cursor: pointer;
     width: 220px;
     height: 84px;
+    margin-left: -16px;
 
-    @include lg {
-        width: 70%;
-        height: 70%;
+    @include lg-max {
+        width: 220px*0.7;
+        height: 84px*0.7;
     }
 }
 
 .modal {
+    padding: 16px 32px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background-color: white;
+}
+
+.modal-menu {
+    @extend %wqtr;
+
+    position: relative;
+}
+
+%cross {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: $gray-1;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+     
+    &:hover {
+        opacity: 1;
+    }
+
+    &::before {
+        @extend %cross;
+
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        @extend %cross;
+
+        transform: rotate(-45deg);
+    }
+}
+
+%plus {
+    position: absolute;
+    top: 0;
+    content: ' ';
+    height: 14px;
+    width: 2px;
+    background-color: $purple-1;
+}
+
+.more {
+    position: absolute;
+    right: 8px;
+    bottom: 16px;
+    background-color: transparent;
+    width: 14px;
+    height: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &::before {
+        @extend %plus;
+    }
+
+    &::after {
+        @extend %plus;
+
+        transform: rotate(90deg);
+    }
+}
+
+.modal-more {
+    @extend %wqtr;
+    @extend %menu;
+    @extend %column;
+
+    background-color: rgba(238, 244, 255, 0.61);
+    padding: 16px 8px;
+    font-family: $font-500;
+    gap: 12px;
 }

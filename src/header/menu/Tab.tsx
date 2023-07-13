@@ -7,7 +7,9 @@ interface TabProps {
 export default function Tab(props: TabProps) {
     return (
         <li className='tab'>
-            {props.title}
+            <a>
+                {props.title}
+            </a>
         </li>
     );
 };

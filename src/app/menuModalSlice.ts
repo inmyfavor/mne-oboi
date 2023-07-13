@@ -13,16 +13,15 @@ export const menuModalSlice = createSlice({
   name: 'menuModal',
   initialState,
   reducers: {
-    show: (state) => {
+    showModal: (state) => {
       state.visible = true;
     },
-    close: (state) => {
+    closeModal: (state) => {
       state.visible = false;
     }
   },
 })
 
-export const { show, close } = menuModalSlice.actions;
-// export const menuModalSelector = (state: RootState) => state.menuModalReducer;
+export const { showModal, closeModal } = menuModalSlice.actions;
 
 export default menuModalSlice.reducer

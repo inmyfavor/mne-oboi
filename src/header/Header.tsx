@@ -2,13 +2,13 @@ import React from 'react';
 import '../style/header.scss';
 
 import Call from './Call';
-import MenuButton from './MenuButton';
-import DesktopMenu from './DesktopMenu';
+import MenuButton from './menu/MenuButton';
 import Modal from './Modal';
 import Logo from './Logo';
 
 import { useAppSelector } from '../app/hooks';
 import { RootState } from '../app/store';
+import Menu from './menu/Menu';
 
 export default function Header() {
     const visible = useAppSelector((state: RootState) => state.menuModal.visible);
@@ -20,7 +20,9 @@ export default function Header() {
                 <Logo/>
             </div>
             <div className='right-block'>
-                <DesktopMenu/>
+                <ul className='desktop-menu'>
+                    <Menu/>
+                </ul>
                 <div className='phone'>+7 999 444 32 84</div>
                 <Call/>
             </div>
