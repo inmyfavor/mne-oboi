@@ -14,7 +14,7 @@ const tabs = [
 export default function Menu() {
     return (
         <>
-        {tabs.map((tab: string, index: number) => <Tab key={'tab:'+index} title={tab}/>)}
+        {tabs.map((tab: string, index: number) => <Tab key={'tab-menu:'+index} title={tab}/>)}
         </>
     );
 };

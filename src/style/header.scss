@@ -12,14 +12,16 @@
     }
 }
 
+@mixin lg-min {
+    @media screen and (min-width: 1240px) {
+      @content;
+    }
+}
+
 %hide {
     @include lg-max {
         display: none;
     }
-}
-
-%wqtr {
-    width: 100%*0.4;
 }
 
 .header {
@@ -94,11 +96,6 @@
             color: $pink;
         }
     }
-
-    // &:hover {
-    //     cursor: pointer;
-    //     color: $pink;
-    // }
 }
 
 .phone {
@@ -109,9 +106,9 @@
     font-size: 18px;
     padding: 0 40px;
     flex-shrink: 0;
+    cursor: pointer;
 
     &:hover {
-        cursor: pointer;
         color: $purple;
     }
 }
@@ -184,6 +181,8 @@
 }
 
 .modal {
+    @extend %column;
+
     padding: 16px 32px;
     position: absolute;
     top: 0;
@@ -191,11 +190,11 @@
     width: 100%;
     height: 100vh;
     background-color: white;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .modal-menu {
-    @extend %wqtr;
-
     position: relative;
 }
 
@@ -269,7 +268,6 @@
 }
 
 .modal-more {
-    @extend %wqtr;
     @extend %menu;
     @extend %column;
 
@@ -277,4 +275,27 @@
     padding: 16px 8px;
     font-family: $font-500;
     gap: 12px;
+    transition: margin-bottom 2s;
+}
+
+.modal-end {
+    @extend %column;
+
+    gap: 16px;
+}
+
+.txt-gray {
+    color: $gray-3;
+    font-size: 12px;
+    font-family: $font-500;
+}
+
+.width-480 {
+    width: 480px;
+}
+
+.modal-phone {
+    color: $gray-2;
+    font-family: $font-500;
+    font-size: 16px;
 }

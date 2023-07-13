@@ -12,7 +12,7 @@ const tabs = [
 export default function More() {
     return (
         <div className='modal-more'>
-            {tabs.map((tab: string, index: number) => <Tab key={'tab:'+index} title={tab}/>)}
+            {tabs.map((tab: string, index: number) => <Tab key={'tab-more:'+index} title={tab}/>)}
         </div>
     );
 };
