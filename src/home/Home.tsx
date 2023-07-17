@@ -1,12 +1,13 @@
 import React from 'react';
-import '../style/home.scss';
-import Header from '../header/Header';
+import '../style/home/style.scss';
+import FirstPage from './firstPage/FirstPage';
+import SecondPage from './secondPage/SecondPage';
 
 export default function Home() {
   return (
     <div className='home'>
-      <Header/>
-      <div style={{height: '1000px'}}></div>
+      <FirstPage/>
+      <SecondPage/>
     </div>
   );
 };

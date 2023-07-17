@@ -1,0 +1,26 @@
+.main {
+    position: relative;
+    height: 90vh;
+    z-index: 1;
+    margin-left: 10%;
+    margin-bottom: 11vh;
+    max-width: 970px;
+
+    @include sm {
+        padding-top: 6%;
+    }
+}
+
+.home-title {
+    font-family: $font-alt;
+    font-size: 64px;
+    line-height: 80px;
+    color: $gray-1;
+    margin-bottom: 88px;
+}
+
+.buttons-block {
+    @extend %row;
+
+    gap: 18px;
+}

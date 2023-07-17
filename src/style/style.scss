@@ -6,6 +6,7 @@ $font-600: MontserratSemiBold;
 $font-500: MontserratMedium;
 $font-400: MontserratRegular;
 $font-300: MontserratLight;
+$font-alt: MontserratAlternatesMedium;
 
 %center {
     display: flex;
@@ -27,4 +28,22 @@ $font-300: MontserratLight;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+@mixin lg-max {
+    @media screen and (max-width: 1240px) {
+      @content;
+    }
+}
+
+@mixin lg-min {
+    @media screen and (min-width: 1240px) {
+      @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (min-width: 771px) {
+      @content;
+    }
 }

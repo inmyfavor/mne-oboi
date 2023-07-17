@@ -1,0 +1,9 @@
+%hide {
+    @include lg-max {
+        display: none;
+    }
+}
+
+%menu {
+    list-style-type: none;
+}

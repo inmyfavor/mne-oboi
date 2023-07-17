@@ -1,0 +1,9 @@
+.advantage {
+    @extend %row;
+
+    gap: 20px;
+    font-family: $font-400;
+    font-size: 14px;
+    align-items: center;
+    flex: 1;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/header.scss';
+import '../style/header/style.scss';
 
 import Call from './Call';
 import MenuButton from './menu/MenuButton';

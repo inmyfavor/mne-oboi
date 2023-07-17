@@ -1,0 +1,61 @@
+.desktop-menu {
+    @extend %row;
+    @extend %hide;
+    @extend %menu;
+
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 4px;
+    white-space: nowrap;
+    justify-content: end;
+    font-family: $font-600;
+}
+
+.mobile-menu {
+    @extend %column;
+    @extend %menu;
+
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #E7EAEF;
+    font-family: $font-500;
+}
+
+.tab {
+    color: #4D4D4D;
+    font-size: 12px;
+    white-space: nowrap;
+    width: fit-content;
+    cursor: pointer;
+
+    @include lg-min {
+        &:hover {
+            color: $pink;
+        }
+    }
+}
+
+.menu-lines {
+    gap: 7px;
+    display: none;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include lg-max {
+        display: flex;
+    }
+}
+
+.line {
+    background-color: $gray-1;
+    height: 2px;
+    width: 28px;
+    gap: 20px;
+}

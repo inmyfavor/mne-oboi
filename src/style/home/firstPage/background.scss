@@ -1,0 +1,17 @@
+.background {
+    background-image: url(../../../../public/photos/main-background.png);
+    background-position: top 0px center;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    min-height: 771px;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 100px;
+
+    @include lg-max {
+        top: 78px;
+    }
+}
