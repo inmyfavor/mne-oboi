@@ -4,11 +4,11 @@ interface TabProps {
     title: string;
 }
 
-export default function Tab(props: TabProps) {
+export default function Tab({title}: TabProps) {
     return (
         <li className='tab'>
             <a>
-                {props.title}
+                {title}
             </a>
         </li>
     );

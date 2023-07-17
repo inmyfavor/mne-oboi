@@ -1,0 +1,100 @@
+.sp-content {
+    @extend %column;
+
+    padding: 50px 100px 0 20px;
+
+    @include lg-max {
+        padding: 50px 20px 0 20px;
+    }
+}
+
+.choice-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include ps {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+}
+
+.categories {
+    @extend %row;
+
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.61);
+    box-shadow: 5px 5px 7px rgba(181, 184, 211, 0.2);
+    border-radius: 30px;
+    max-width: 620px;
+}
+
+%overBtn {
+    @extend %button;
+
+    font-family: $font-400;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.category-button {
+    @extend %overBtn;
+
+    color: $gray-1;
+    border: 1px solid $gray-1;
+    background-color: white;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+.category-button-selected {
+    @extend %overBtn;
+
+    background: $purple-gradient;
+    color: white;
+    border: none;
+}
+
+.cards-center {
+    @extend %column;
+
+    align-items: center;
+}
+
+.productCards {
+    @extend %row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 30px 20px;
+}
+
+.card {
+    position: relative;
+    width: 360px;
+    height: 380px;
+    background-color: $gray-3;
+    flex-shrink: 0;
+    border-radius: 30px;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 7px rgba(181, 184, 211, 0.2);
+    border-radius: 25px;
+    background: linear-gradient(128.66deg, #B3EBFF -0.22%, #FBC2EB 100%);
+    font-family: $font-500;
+    font-size: 20px;
+    text-align: center;
+    color: $gray-5;
+}

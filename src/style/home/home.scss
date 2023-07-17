@@ -1,9 +1,33 @@
 .home {
-    @include sm {
-        padding-top: 100px;
+    // @include sm {
+    //     padding-top: 100px;
 
-        @include lg-max {
-            padding-top: 78px;
-        }
+    //     @include lg-max {
+    //         padding-top: 78px;
+    //     }
+    // }
+    padding-top: 100px;
+
+    @include lg-max {
+        padding-top: 78px;
     }
+}
+
+%title {
+    font-family: $font-alt;
+    color: $gray-1;
+}
+
+.home-title {
+    @extend %title;
+
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 88px;
+}
+
+.category-title {
+    @extend %title;
+
+    font-size: 52px;
 }

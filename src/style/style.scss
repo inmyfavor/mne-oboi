@@ -47,3 +47,9 @@ $font-alt: MontserratAlternatesMedium;
       @content;
     }
 }
+
+@mixin ps {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+}

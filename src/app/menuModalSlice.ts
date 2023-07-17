@@ -1,5 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
-// import { RootState } from './store';
+import { createSlice } from '@reduxjs/toolkit';
 
 export interface MenuModal {
   visible: boolean;

@@ -1,18 +1,37 @@
-import React from 'react';
-import '../style/elements/button.scss';
+import React, { MouseEventHandler } from 'react';
+// import '../style/elements/button.scss';
 
 interface ButtonProps {
     children: string;
+    onClick: MouseEventHandler;
 }
 
-export function PinkButton({children}: ButtonProps) {
+export function PinkButton({children, onClick}: ButtonProps) {
     return (
-        <div className='pink-button'>{children}</div>
+        <button 
+            className='pink-button'
+            onClick={onClick}>
+                {children}
+        </button>
     );
 };
 
-export function WhiteButton({children}: ButtonProps) {
+export function WhiteButton({children, onClick}: ButtonProps) {
     return (
-        <div className='white-button'>{children}</div>
+        <button 
+            className='white-button'
+            onClick={onClick}>
+                {children}
+        </button>
+    );
+};
+
+export function OutlineButton({children, onClick}: ButtonProps) {
+    return (
+        <button 
+            className='outline-button'
+            onClick={onClick}>
+                {children}
+        </button>
     );
 };
