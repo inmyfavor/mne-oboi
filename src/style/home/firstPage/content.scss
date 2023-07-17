@@ -18,3 +18,11 @@
 
     gap: 24px;
 }
+
+.home-title {
+    @extend %title;
+
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 88px;
+}

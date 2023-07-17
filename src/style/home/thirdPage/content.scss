@@ -1,0 +1,66 @@
+.gift-title {
+    @extend %title;
+
+    font-size: 48px;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+%question-title {
+    color: $gray-2;
+    font-family: $font-400;
+    font-size: 20px;
+}
+
+.question-title {
+    @extend %question-title;
+
+}
+
+.num-circle {
+    @extend %question-title;
+    @extend %center;
+
+    background-color: $purple-2;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.question-content {
+    @extend %column;
+
+    margin-left: 10%
+}
+
+.question {
+    @extend %row;
+
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.budgetInput {
+    @extend %center;
+
+    width: 210px;
+    font-family: $font-400;
+    font-size: 16px;
+    padding: 10px 20px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1.2px solid $gray-6;
+    outline: none;
+}
+
+.slider {
+    width: 60vw;
+    height: 2px;
+    background: $purple-1;
+    margin: 40px 0;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+}

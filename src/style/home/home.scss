@@ -18,16 +18,22 @@
     color: $gray-1;
 }
 
-.home-title {
-    @extend %title;
+// .home-title {
+//     @extend %title;
 
-    font-size: 64px;
-    line-height: 80px;
-    margin-bottom: 88px;
-}
+//     font-size: 64px;
+//     line-height: 80px;
+//     margin-bottom: 88px;
+// }
 
-.category-title {
-    @extend %title;
+// .category-title {
+//     @extend %title;
 
-    font-size: 52px;
-}
+//     font-size: 52px;
+// }
+
+// .gift-title {
+//     @extend %title;
+
+//     font-size: 24px;
+// }

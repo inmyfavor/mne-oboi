@@ -1,0 +1,14 @@
+.cards-center {
+    @extend %column;
+
+    align-items: center;
+}
+
+.productCards {
+    @extend %row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 30px 20px;
+}
