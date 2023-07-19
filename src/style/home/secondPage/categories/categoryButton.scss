@@ -6,22 +6,30 @@
     border-radius: 20px;
 }
 
-.category-button {
+%category-button {
     @extend %overBtn;
 
     color: $gray-1;
     border: 1px solid $gray-1;
     background-color: white;
+}
+
+.category-button {
+    @extend %category-button;
 
     &:hover {
         color: $purple;
     }
 }
 
-.category-button-selected {
+%category-button-selected {
     @extend %overBtn;
 
     background: $purple-gradient;
     color: white;
     border: none;
+}
+
+.category-button-selected {
+    @extend %category-button-selected;
 }

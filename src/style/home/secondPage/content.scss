@@ -1,10 +1,10 @@
 .sp-content {
     @extend %column;
 
-    padding: 50px 100px 0 20px;
+    padding: 30px 100px 0 20px;
 
     @include lg-max {
-        padding: 50px 20px 0 20px;
+        padding: 30px 20px 0 20px;
     }
 }
 

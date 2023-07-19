@@ -7,10 +7,14 @@
     padding: 13px;
 }
 
-.pink-circle {
+%pink-circle {
     @extend %circle;
 
     background: $pink-gradient;
+}
+
+.pink-circle-customers {
+    @extend %pink-circle;
 
     &::before {
         content: url('../../../../../public/icons/customers.svg');

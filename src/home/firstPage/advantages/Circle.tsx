@@ -2,7 +2,7 @@ import React from 'react';
 
 export function PinkCircle() {
     return (
-        <div className='pink-circle'></div>
+        <div className='pink-circle-customers'></div>
     );
 };
 

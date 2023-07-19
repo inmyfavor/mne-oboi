@@ -2,12 +2,10 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export interface Category {
     category: string;
-    // btnClName: string;
 };
 
 const initialState: Category = {
     category: 'Детские обои',
-    // btnClName: 'overline-button',
 };
 
 export const categoriesSlice = createSlice({
@@ -17,9 +15,6 @@ export const categoriesSlice = createSlice({
     selectCategory: (state, action: PayloadAction<string>) => {
         state.category = action.payload;
     },
-    // setbtnClName: (state, action: PayloadAction<string>) => {
-    //     state.btnClName = action.payload;
-    // },
   },
 })
 
