@@ -9,12 +9,12 @@ export default function NavButtons() {
         <div className='navBtns'>
             <CategoryButton
                 className='backBtn'
-                onClick={()=>{dispatch(goBack())}}>
+                onClick={()=>dispatch(goBack())}>
                     Назад
             </CategoryButton>
             <CategoryButton
                 className='forwardBtn'
-                onClick={()=>{dispatch(goForward())}}>
+                onClick={()=>dispatch(goForward())}>
                     Далее
             </CategoryButton>
         </div>

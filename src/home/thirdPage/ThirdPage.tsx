@@ -5,6 +5,7 @@ import Discount from './Discount';
 import { useAppSelector } from '../../app/hooks';
 import { RootState } from '../../app/store';
 import Time from './questions/time/Time';
+import Rooms from './room/Rooms';
 
 export default function ThirdPage() {
     const mode = useAppSelector((state: RootState) => state.pageMode.mode);
@@ -15,7 +16,8 @@ export default function ThirdPage() {
         </h4>
         <div className='tp-align'>
             {/* <Budget/> */}
-            <Time/>
+            {/* <Time/> */}
+            <Rooms/>
             <ProgressBar/>
             <Discount/>
         </div>

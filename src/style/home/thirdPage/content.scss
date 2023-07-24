@@ -46,7 +46,7 @@
     padding: 10px 20px;
     flex-shrink: 0;
     border-radius: 25px;
-    border: 1.2px solid $gray-6;
+    border: $gray-border;
     outline: none;
 }
 
@@ -241,9 +241,10 @@
     padding: 10px 20px;
     flex-shrink: 0;
     border-radius: 25px;
-    border: 1.2px solid $gray-6;
+    border: $gray-border;
     cursor: pointer;
     position: relative;
+    background-color: white;
 }
 
 .option-text {
@@ -266,6 +267,15 @@
     display: grid;
     place-content: center;
 
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     &::before {
         content: '';
         width: 12px;
@@ -285,11 +295,50 @@
     }
 }
 
-.option-hidden {
-    position: absolute;
-    top: 0;
-    left: 0;
+.rooms-content {
+    @extend %column;
+
+    gap: 20px;
+}
+
+.rooms-align {
+    @extend %row;
+
+    gap: 8px;
+}
+
+%room {
+    border-radius: 10%;
+    flex: 1;
+    height: 200px;
+    overflow: hidden;
+    min-width: 140px;
+    border: 1.2px solid
+}
+
+.room {
+    @extend %room;
+
+    border-color: $gray-6;
+}
+
+.room-selected {
+    @extend %room;
+
+    border-color: $purple-1;
+}
+
+.room-img {
     width: 100%;
-    height: 100%;
-    cursor: pointer;
+    height: 75%;
+    background-color: $purple-2;
+}
+
+.room-title {
+    display: flex;
+    align-items: center;
+    padding: 10px 10%;
+    font-family: $font-400;
+    font-size: 12px;
+    color: $gray-5;
 }
