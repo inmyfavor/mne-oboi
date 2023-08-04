@@ -13,7 +13,7 @@ function Bonus({title, src}: BonusProps) {
             <div className='pink-circle-delivery'>
                 <img src={`./icons/${src}.svg`} alt=''/>
             </div>
-            <p className='tp-text'>{title}</p>
+            <p className='tp-text-10'>{title}</p>
         </div>
     );
 };
@@ -30,10 +30,13 @@ export default function Discount() {
                 title='Бесплатная доставка'
                 src='truck'/>
             </div>
-            <button
-                className='pink-percent-button'>
-                    {mode*10}%
-            </button>
+            <div className='button-align'>
+                <button
+                    className='pink-percent-button'>
+                        {mode*10}%
+                </button>
+                <p className='tp-text-10'>Ваша скидка</p>
+            </div>
         </div>
     );
 };

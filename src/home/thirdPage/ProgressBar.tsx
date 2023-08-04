@@ -9,8 +9,8 @@ export default function ProgressBar() {
         <div className='progressBar-content'>
             <div className='pb-union'>
                 <div className='done'>
-                    <p className='tp-text'>Готово:</p>
-                    <div className='percent-text'>{mode*10}%</div>
+                    <p className='tp-text-16'>Готово:</p>
+                    <div className='percent-text'>{mode*20}%</div>
                 </div>
                 <div className='progressBar'>
                     <div 

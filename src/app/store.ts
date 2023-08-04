@@ -4,6 +4,7 @@ import moreModalReducer from './moreModalSlice';
 import categoriesReducer from './categoriesSlice';
 import sliderReducer from './sliderSlice';
 import pageModeReducer from './pageModeSlice';
+import optionCardReducer from './optionCardSlice'
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     categories: categoriesReducer,
     slider: sliderReducer,
     pageMode: pageModeReducer,
+    optionCard: optionCardReducer,
   },
 })
 
